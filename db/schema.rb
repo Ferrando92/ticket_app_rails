@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908143713) do
+ActiveRecord::Schema.define(version: 20160908143828) do
+
+  create_table "films", force: :cascade do |t|
+    t.string   "film_id"
+    t.string   "name"
+    t.text     "synopsis"
+    t.string   "director"
+    t.integer  "price"
+    t.datetime "add_date"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tickets", force: :cascade do |t|
     t.string   "ticket_id"

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tickets
   resources :transactions
   resources :sessions
   resources :films
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   #get '/' => 'home#index' #Alternativa
   root 'home#index'
 
-  resources :tickets
 =begin
            root GET    /                           home#index
         tickets GET    /tickets(.:format)          tickets#index

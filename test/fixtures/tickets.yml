@@ -4,12 +4,12 @@ one:
   ticket_id: MyString
   film_id: MyString
   user_id: MyString
-  sesion_id: MyString
-  date: 2016-09-08 13:51:01
+  session_id: MyString
+  date: 2016-09-08 17:44:21
 
 two:
   ticket_id: MyString
   film_id: MyString
   user_id: MyString
-  sesion_id: MyString
-  date: 2016-09-08 13:51:01
+  session_id: MyString
+  date: 2016-09-08 17:44:21

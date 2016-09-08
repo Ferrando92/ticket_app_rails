@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908144346) do
+ActiveRecord::Schema.define(version: 20160908155313) do
 
   create_table "films", force: :cascade do |t|
     t.string   "film_id"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160908144346) do
     t.string   "ticket_id"
     t.string   "film_id"
     t.string   "user_id"
-    t.string   "sesion_id"
+    t.string   "session_id"
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

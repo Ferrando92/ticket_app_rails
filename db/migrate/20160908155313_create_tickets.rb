@@ -4,7 +4,7 @@ class CreateTickets < ActiveRecord::Migration[5.0]
       t.string :ticket_id
       t.string :film_id
       t.string :user_id
-      t.string :sesion_id
+      t.string :session_id
       t.datetime :date
 
       t.timestamps

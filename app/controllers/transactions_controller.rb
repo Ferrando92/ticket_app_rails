@@ -19,6 +19,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/1/edit
   def edit
+
   end
 
   # POST /transactions
@@ -28,6 +29,7 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.save
+        do_transaction(@transaction)
         format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
         format.json { render :show, status: :created, location: @transaction }
       else
@@ -42,6 +44,7 @@ class TransactionsController < ApplicationController
   def update
     respond_to do |format|
       if @transaction.update(transaction_params)
+        edit
         format.html { redirect_to @transaction, notice: 'Transaction was successfully updated.' }
         format.json { render :show, status: :ok, location: @transaction }
       else
@@ -70,5 +73,19 @@ class TransactionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
       params.require(:transaction).permit(:transaction_id, :user_id, :quantity)
+    end
+
+    def deprecated_do_transaction
+      transaction = Transaction.find(params[:id])
+      user = User.find(transaction.user_id)
+      user.wallet += transaction.quantity
+      user.save
+      transaction.save
+    end
+
+    def do_transaction(transaction)
+      user = User.find(transaction.user_id)
+      user.wallet += transaction.quantity
+      user.save
     end
 end

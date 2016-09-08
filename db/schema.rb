@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908115101) do
+ActiveRecord::Schema.define(version: 20160908143713) do
 
   create_table "tickets", force: :cascade do |t|
     t.string   "ticket_id"
@@ -20,6 +20,19 @@ ActiveRecord::Schema.define(version: 20160908115101) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "email"
+    t.string   "name"
+    t.string   "password"
+    t.float    "wallet"
+    t.datetime "registration_date"
+    t.boolean  "active"
+    t.boolean  "admin_role"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

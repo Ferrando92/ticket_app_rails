@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-
-  resources :films
-  resources :transactions
-  resources :sessions
-  resources :users
-  resources :tickets
-  #get '/' => 'home#index' #Alternativa
-  root 'home#index'
+  scope "(:locale)", locale: /es|en/ do
+     resources :films
+    resources :transactions
+    resources :sessions
+    resources :users
+    resources :tickets
+    #get '/' => 'home#index' #Alternativa
+    root 'home#index'
+  end
+ 
 
 =begin
            root GET    /                           home#index

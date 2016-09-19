@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Film:</strong>
+  <strong><%=t('show_Film_label')%>:</strong>
   <%= @ticket.film.name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%=t('show_Name_label')%>:</strong>
   <%= @ticket.user.name %>
 </p>
 
 <p>
-  <strong>Mail:</strong>
+  <strong><%=t('show_Mail_label')%>:</strong>
   <%= @ticket.user.email %>
 </p>
 
 <p>
-  <strong>Session:</strong>
+  <strong><%=t('show_Session_label')%>:</strong>
   <%= @ticket.session.info %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%=t('show_Price_label')%>:</strong>
   <%= "#{@ticket.film.price}€"%>
 </p>
 

@@ -13,17 +13,24 @@
         %div{:class => "container-fluid"}
           %div{:class => "navbar-header"}
             %a{:class => "navbar-brand", :href => '/'}
-              Ticket Meistah
+              = t('layout_brand_label')
           %ul{:class => "nav navbar-nav"}
             %li
-              %a{:href => 'tickets/new'} New ticket
+              %a{:href => '../#{params[0]}/tickets/new'} 
+                = t('layout_new_ticket_label')
             %li
-              %a{:href => '/tickets'} All tickets
+              %a{:href => '../tickets'} 
+                = t('layout_show_tickets_label')
             %li
-              %a{:href => '/delete_session'} Delete all tickets
+              %a{:href => '../films'} 
+                = t('layout_show_films_label')
           %ul{:class => "nav navbar-nav navbar-right"}
             %li
-              %a Login
+              %a{:href => '../users/new'} 
+                = t('layout_sign_up_label')
+            %li  
+              %a{:href => '../users/new'}
+                = t('layout_login_label')
     #content
       %div{:class => "container center-block" }
         =yield

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :films
   resources :transactions
   resources :sessions
-  resources :films
   resources :users
   resources :tickets
   #get '/' => 'home#index' #Alternativa

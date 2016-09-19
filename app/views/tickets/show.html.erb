@@ -2,17 +2,27 @@
 
 <p>
   <strong>Film:</strong>
-  <%= @ticket.film_id %>
+  <%= @ticket.film.name %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @ticket.user_id %>
+  <strong>Name:</strong>
+  <%= @ticket.user.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @ticket.user.email %>
 </p>
 
 <p>
   <strong>Session:</strong>
-  <%= @ticket.session_id %>
+  <%= @ticket.session.info %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= "#{@ticket.film.price}€"%>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |

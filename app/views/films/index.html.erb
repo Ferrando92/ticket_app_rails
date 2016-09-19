@@ -5,12 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Film</th>
       <th>Name</th>
       <th>Synopsis</th>
       <th>Director</th>
       <th>Price</th>
-      <th>Add date</th>
       <th>Active</th>
       <th colspan="3"></th>
     </tr>
@@ -19,12 +17,10 @@
   <tbody>
     <% @films.each do |film| %>
       <tr>
-        <td><%= film.film_id %></td>
         <td><%= film.name %></td>
         <td><%= film.synopsis %></td>
         <td><%= film.director %></td>
         <td><%= film.price %></td>
-        <td><%= film.add_date %></td>
         <td><%= film.active %></td>
         <td><%= link_to 'Show', film %></td>
         <td><%= link_to 'Edit', edit_film_path(film) %></td>

@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Ticket:</strong>
-  <%= @ticket.ticket_id %>
-</p>
-
-<p>
   <strong>Film:</strong>
   <%= @ticket.film_id %>
 </p>
@@ -18,11 +13,6 @@
 <p>
   <strong>Session:</strong>
   <%= @ticket.session_id %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @ticket.date %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |

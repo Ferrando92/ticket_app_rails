@@ -10,22 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908155313) do
+ActiveRecord::Schema.define(version: 20160919150011) do
 
   create_table "films", force: :cascade do |t|
-    t.string   "film_id"
     t.string   "name"
     t.text     "synopsis"
     t.string   "director"
     t.integer  "price"
-    t.datetime "add_date"
     t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "loosers", force: :cascade do |t|
+    t.string   "user_id"
+    t.float    "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sessions", force: :cascade do |t|
-    t.string   "session_id"
     t.string   "film_id"
     t.string   "info"
     t.datetime "created_at", null: false
@@ -33,34 +37,29 @@ ActiveRecord::Schema.define(version: 20160908155313) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.string   "ticket_id"
     t.string   "film_id"
     t.string   "user_id"
     t.string   "session_id"
-    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.string   "transaction_id"
     t.string   "user_id"
     t.float    "quantity"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "user_id"
     t.string   "email"
     t.string   "name"
     t.string   "password"
     t.float    "wallet"
-    t.datetime "registration_date"
     t.boolean  "active"
     t.boolean  "admin_role"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

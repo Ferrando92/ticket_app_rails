@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ticket_id: MyString
   film_id: MyString
   user_id: MyString
   session_id: MyString
-  date: 2016-09-08 17:44:21
 
 two:
-  ticket_id: MyString
   film_id: MyString
   user_id: MyString
   session_id: MyString
-  date: 2016-09-08 17:44:21
